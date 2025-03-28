@@ -19,7 +19,7 @@ export const GET = async (_: NextRequest,{params}: { params:{id:string} }
 
        return NextResponse.json({message: 'タスク取得成功',task });
     } catch (error) {
-        console.log(error);
+        
         return NextResponse.json({message: 'タスク取得失敗'},{status:500})
         
     }
