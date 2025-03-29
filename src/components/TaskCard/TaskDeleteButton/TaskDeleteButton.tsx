@@ -4,7 +4,7 @@
 import { deleteTask, FormState } from "@/actions/task";
 import { useEffect } from "react";
 import { useFormState, useFormStatus } from "react-dom";
-import { FaTrash, FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 
 interface TaskDeleteButtonProps {
     id: string;
@@ -21,7 +21,7 @@ const TaskDeleteButton: React.FC<TaskDeleteButtonProps> = ({ id }) => {
     if(state && state.error !== ''){
       alert(state.error);
     }
-  },[state])
+  },[state.error])
   
 
   const SubmitButton = () => {

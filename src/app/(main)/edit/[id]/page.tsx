@@ -1,6 +1,5 @@
 import EditTaskForm from "@/components/EditTaskForm/EditTaskForm";
 import { TaskDocument } from "@/models/task";
-import { log } from "console";
 
 interface Params {
     params: { id:string };
