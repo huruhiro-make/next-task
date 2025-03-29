@@ -1,6 +1,6 @@
 import { TaskDocument, TaskModel } from "@/models/task";
 import { connectDb } from "@/utils/database";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 export const GET = async () => {
     try {

@@ -21,7 +21,7 @@ const TaskDeleteButton: React.FC<TaskDeleteButtonProps> = ({ id }) => {
     if(state && state.error !== ''){
       alert(state.error);
     }
-  },[state.error])
+  },[state])
   
 
   const SubmitButton = () => {

@@ -1,6 +1,6 @@
 import { TaskDocument, TaskModel } from "@/models/task";
 import { connectDb } from "@/utils/database";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
 export const GET = async () => {
     const currentDate = new Date().toLocaleDateString('ja-JP',{
@@ -17,7 +17,7 @@ export const GET = async () => {
 
         return NextResponse.json({ message: 'タスク取得成功',tasks: completedTasks  });
     } catch (error) {
-        
+        console.error("Error fetching expired tasks:", error);
         return NextResponse.json({ message: 'タスク取得失敗' },{ status: 500 } );
         
     }
